@@ -1,0 +1,13 @@
+.venv/
+.env
+.ruff_cache/
+__pycache__/
+.vscode/
+.data/
+data/
+descriptions/
+images/
+course_content/
+promptfoo.yaml
+test.ipynb
+project-tds-virtual-ta-q1.webp
