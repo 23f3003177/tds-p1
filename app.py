@@ -32,7 +32,7 @@ app.add_middleware(
 @app.post("/api/v1/query")
 def main(req: InputRequest) -> QueryResponse:
     try:
-        return get_llm_response(req.question)
+        return get_llm_response(req.question, req.image)
     except Exception as e:
         return { 'answer': '', 'links': '' }
 
