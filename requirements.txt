@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 pinecone
-google-generativeai
+google-genai
 requests
 numpy 
 python-dotenv
