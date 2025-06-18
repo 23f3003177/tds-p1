@@ -10,7 +10,7 @@ from app_utils import get_llm_response
 
 class InputRequest(BaseModel):
     question: str
-    image: Optional[Base64Str | list[Base64Str] | None] = None
+    image: Optional[str | list[str] | None] = None
 
 
 class UrlSource(BaseModel):
