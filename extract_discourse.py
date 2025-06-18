@@ -11,6 +11,7 @@ load_dotenv()
 USERNAME = os.getenv("DISCOURSE_USERNAME")
 PASSWORD = os.getenv("DISCOURSE_PASSWORD")
 BASE_URL = os.getenv("DISCOURSE_URL")
+COURSE_CATEGORY_ID = "34"
 
 
 if not all([BASE_URL, USERNAME, PASSWORD]):
@@ -19,7 +20,6 @@ if not all([BASE_URL, USERNAME, PASSWORD]):
     )
     exit()
 
-COURSE_CATEGORY_ID = "34"
 
 session = requests.Session()
 session.headers.update(
@@ -58,9 +58,3 @@ else:
     print("Login failed. Check your credentials or the website's response.")
     print("Response:", login_response.text)
 
-# except requests.exceptions.RequestException as e:
-#     print(f"\n[ERROR] An error occurred during the request: {e}")
-# except KeyError:
-#     print("\n[ERROR] Could not find the 'csrf' key in the response. The site structure may have changed.")
-# except Exception as e:
-#     print(f"\n[ERROR] An unexpected error occurred: {e}")
